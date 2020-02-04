@@ -1,0 +1,8 @@
+// FreeFem++ square.edp  
+int nn = 10; 
+//for(int nn=10; nn<101; nn += 10)
+{
+mesh Th=square(nn,nn);
+savemesh(Th,"square-"+nn+".msh");
+ plot(Th); 
+}
