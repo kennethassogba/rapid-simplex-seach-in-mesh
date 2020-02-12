@@ -70,7 +70,7 @@ int Maillage::SimplexContainPoint(const R2 &P, int K)
         for (int i = 0; i < 3; ++i)
             v[i] = (*this)[K][i];
 
-        //int Kp=K;
+        // int Kp = K;
         int m = 0, nextT = 0;
         while (m < 3)
         {
@@ -89,14 +89,16 @@ int Maillage::SimplexContainPoint(const R2 &P, int K)
 
         //Decommenter pour afficher les differentes etapes de l'algorithme et aussi decommenter la ligne int Kp=K
         /*
-        if(m==3){
-        	if(t==-1)
-        		cout <<"Le point P=(" << P.x << ',' << P.y << ") n'est pas dans le maillage "<<endl;
-        	else
-        		cout <<"Le point P=(" << P.x << ',' << P.y << ") est dans le triangle "<<K<< endl;
-        }else
-        	cout << "Le point P=(" << P.x << ',' << P.y << ") n'est pas dans le triangle "<<Kp<<". On passe au triangle " <<K<< endl;
-        */
+        if (m == 3)
+        {
+            if (nextT == -1)
+                cout << "Le point P=(" << P.x << ',' << P.y << ") n'est pas dans le maillage " << endl;
+            else
+                cout << "Le point P=(" << P.x << ',' << P.y << ") est dans le triangle " << K << endl;
+        }
+        else
+            cout << "Le point P=(" << P.x << ',' << P.y << ") n'est pas dans le triangle " << Kp << ". On passe au triangle " << K << endl;
+            */
 
         //Si le point est dans 1 triangle (3 aires positives)
         //ou si le point n'est pas dans le maillage
